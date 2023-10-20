@@ -26,6 +26,8 @@ public class StudentDao {
 
             flag = true;
 
+            con.close();
+
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -53,6 +55,8 @@ public class StudentDao {
             pstmnt.executeUpdate();
 
             flag = true;
+
+            con.close();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -86,6 +90,8 @@ public class StudentDao {
                 System.out.println("City: "+city);
                 System.out.println("==================");
             }
+
+            con.close();
 
 
         } catch (SQLException e) {
